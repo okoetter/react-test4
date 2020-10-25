@@ -1,0 +1,29 @@
+td, th {
+  border: 1px solid black;
+}
+
+th {
+  font-weight: bold;
+  background: silver;
+}
+
+td {
+  padding: 0.5em 2em;
+  text-align: right;
+}
+
+.TichuTable {
+  margin: auto;
+  max-height: (100vh - 42px);
+  width: 300px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.TichuTable th {
+  width: 10em;
+  max-width: 10em;
+  min-width: 10em;
+  height: 2em;
+  vertical-align: middle;
+}

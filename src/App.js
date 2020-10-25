@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import './App.css';
 import EnterPlayerNamesForm from "./EnterPlayerNamesForm";
+import TichuTable from './TichuTable';
 
 function App() {
   const [teamNames, setTeamNames] = useState({ team1: "Name Team 1", team2: "Name Team 2"});
@@ -13,18 +14,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact>
-            <table className="TichuTable">
-              <tbody>
-                <tr>
-                  <th>{teamNames.team1}</th>
-                  <th>{teamNames.team2}</th>
-                </tr>
-                <tr>
-                <td>1</td>
-                <td>2</td>
-                </tr>
-              </tbody>
-            </table>
+            <TichuTable teamNames={teamNames} />
             <div className="buttonBar">
               <Link className="btn" to="/team-names">Team-Namen</Link>
             </div>
