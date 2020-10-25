@@ -37,10 +37,20 @@ td {
   width: 300px;
   border-spacing: 0;
   border-collapse: collapse;
- }
+}
 
- .TichuTable th {
+.TichuTable th {
   /*width: 15em;*/
   height: 2em;
   vertical-align: middle;
+}
+
+.btn {
+  font-family: sans-serif;
+  display: inline-block;
+  background: silver;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+  text-decoration: auto;
  }
