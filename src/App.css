@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+body {
+  background: rgb(255,255,0);
+  background: linear-gradient(148deg, rgba(255,255,0,1) 0%, rgba(255,181,0,1) 100%) no-repeat;
+  height: 100vh;
+
+  font-family: "Roboto Mono", monospace;
+  color: rgb(11, 71, 105);
+}
+
+h1 {
+  padding: .5em;
+  text-align: center;
+  font-size: 35px;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+
+td, th {
+  border: 1px solid black;
+}
+
+th {
+  font-weight: bold;
+  background: silver;
+}
+
+td {
+  padding: 0.5em 2em;
+  text-align: right;
+}
+
+.TichuTable {
+  /*border: 1px dotted black; */
+  margin: auto;
+  max-height: (100vh - 42px);
+  width: 300px;
+  border-spacing: 0;
+  border-collapse: collapse;
+ }
+
+ .TichuTable th {
+  /*width: 15em;*/
+  height: 2em;
+  vertical-align: middle;
+ }
