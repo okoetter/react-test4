@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-const EnterPlayerNames = ({teamName1, setTeamName1, teamName2, setTeamName2}) => {
+const EnterPlayerNames = ({ teamNames, setTeamNames }) => {
   const SaveTeamNamesHandler = () => {
-    setTeamName1(document.querySelector(".team1").value.trim());
-    setTeamName2(document.querySelector(".team2").value.trim());
+    setTeamNames({
+      team1: document.querySelector(".team1").value.trim(),
+      team2: document.querySelector(".team2").value.trim()
+    });
   };
 
   const TeamNameKeyDownHandler = (e) => {
@@ -18,11 +20,11 @@ const EnterPlayerNames = ({teamName1, setTeamName1, teamName2, setTeamName2}) =>
     <>
       <label>
         Name Team 1:
-        <input className="team1" defaultValue={teamName1} onKeyDown={TeamNameKeyDownHandler} />
+        <input className="team1" defaultValue={teamNames.team1} onKeyDown={TeamNameKeyDownHandler} />
       </label>
       <label>
         Name Team 2:
-        <input className="team2" defaultValue={teamName2} onKeyDown={TeamNameKeyDownHandler} />
+        <input className="team2" defaultValue={teamNames.team2} onKeyDown={TeamNameKeyDownHandler} />
       </label>
       <div>
         <Link className="btn btnSave" to="/" onClick={SaveTeamNamesHandler}>Speichern</Link>
