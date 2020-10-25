@@ -31,7 +31,6 @@ td {
 }
 
 .TichuTable {
-  /*border: 1px dotted black; */
   margin: auto;
   max-height: (100vh - 42px);
   width: 300px;
@@ -40,17 +39,26 @@ td {
 }
 
 .TichuTable th {
-  /*width: 15em;*/
+  width: 10em;
+  max-width: 10em;
+  min-width: 10em;
   height: 2em;
   vertical-align: middle;
 }
 
 .btn {
   font-family: sans-serif;
+  color: black;
   display: inline-block;
   background: silver;
   padding: 10px;
   text-align: center;
   border: 1px solid black;
-  text-decoration: auto;
- }
+  text-decoration: none;
+}
+
+.btn:focus,
+.btn:hover {
+  background-color: darkgrey;
+  color: White;
+}
