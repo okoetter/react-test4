@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import './App.css';
-import EnterPlayerNames from "./EnterPlayerNames";
+import EnterPlayerNamesForm from "./EnterPlayerNamesForm";
 
 function App() {
   const [teamNames, setTeamNames] = useState({ team1: "Name Team 1", team2: "Name Team 2"});
@@ -29,7 +29,7 @@ function App() {
               <Link className="btn" to="/team-names">Team-Namen</Link>
             </div>
           </Route>
-          <Route path="/team-names" render={(props) => <EnterPlayerNames {...props} teamNames={teamNames} setTeamNames={setTeamNames} />} />
+          <Route path="/team-names" render={(props) => <EnterPlayerNamesForm {...props} teamNames={teamNames} setTeamNames={setTeamNames} />} />
         </Switch>
       </Router>
     </div>

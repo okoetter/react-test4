@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-const EnterPlayerNames = ({ teamNames, setTeamNames }) => {
+const EnterPlayerNamesForm = ({ teamNames, setTeamNames }) => {
   const SaveTeamNamesHandler = () => {
     setTeamNames({
       team1: document.querySelector(".team1").value.trim(),
@@ -9,7 +9,7 @@ const EnterPlayerNames = ({ teamNames, setTeamNames }) => {
     });
   };
 
-  const TeamNameKeyDownHandler = (e) => {
+  const InputKeyDownHandler = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
       document.querySelector(".btnSave").click();
@@ -20,11 +20,11 @@ const EnterPlayerNames = ({ teamNames, setTeamNames }) => {
     <>
       <label>
         Name Team 1:
-        <input className="team1" defaultValue={teamNames.team1} onKeyDown={TeamNameKeyDownHandler} />
+        <input className="team1" defaultValue={teamNames.team1} onKeyDown={InputKeyDownHandler} />
       </label>
       <label>
         Name Team 2:
-        <input className="team2" defaultValue={teamNames.team2} onKeyDown={TeamNameKeyDownHandler} />
+        <input className="team2" defaultValue={teamNames.team2} onKeyDown={InputKeyDownHandler} />
       </label>
       <div>
         <Link className="btn btnSave" to="/" onClick={SaveTeamNamesHandler}>Speichern</Link>
@@ -33,4 +33,4 @@ const EnterPlayerNames = ({ teamNames, setTeamNames }) => {
   );
 }
 
-export default EnterPlayerNames;
+export default EnterPlayerNamesForm;
